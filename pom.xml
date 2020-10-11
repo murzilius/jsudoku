@@ -28,6 +28,11 @@
   </dependencies>
 
   <build>
+  <finalName>Jsudoku</finalName>
+        <!-- <sourceDirectory>src/main/java/murzilius/oyg/</sourceDirectory>-->
+        
+
+
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
@@ -58,6 +63,14 @@
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.0.2</version>
+    <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <mainClass>oyg.sudoku.CreateSudokuGUI</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
