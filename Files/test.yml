@@ -1,0 +1,41 @@
+---
+#test.yml
+- hosts: VM
+  user: vagrant
+  become: yes
+  tasks:
+   - name: MC install
+     apt:
+      name: mc
+   - name: Install JRE
+     apt:
+      name: default-jre
+   - name: Install JDK
+     apt:
+      name: default-jdk
+   - name: APT HTTPS Transport install
+     apt:
+      name: apt-transport-https
+   - name: Add key for Jenkins
+     apt_key:
+      url: https://pkg.jenkins.io/debian-stable/jenkins.io.key
+   - name: apt update cache
+     apt: update_cache=yes
+   - name: Prepare Source
+     lineinfile:
+        create: yes
+        path: /etc/apt/sources.list.d/jenkins.list
+        line: 'deb https://pkg.jenkins.io/debian-stable binary/'
+        insertafter: EOF
+   - name: apt update cache
+     apt: update_cache=yes
+   - name: JENKINS  install
+     apt:
+      name: jenkins
+   - name: Install git
+     apt:
+      name: git
+   - name: Install Maven
+     apt:
+      name: maven
+
