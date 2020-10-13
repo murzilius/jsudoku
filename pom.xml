@@ -95,6 +95,7 @@
                 <targetJdk>1.6</targetJdk>
                 <rulesets>
                     <ruleset>/rulesets/basic.xml</ruleset>
+                    <ruleset>/rulesets/unneeded.xml</ruleset>
                 </rulesets>
             </configuration>
         </plugin> 
