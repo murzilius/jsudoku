@@ -1,0 +1,72 @@
+Started by timer
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Jsudoku
+The recommended git tool is: NONE
+using credential 5bb00cfd-e7e0-41dc-96a6-e24edaf46792
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.main.url https://github.com/murzilius/jsudoku # timeout=10
+Fetching upstream changes from https://github.com/murzilius/jsudoku
+ > git --version # timeout=10
+ > git --version # 'git version 2.11.0'
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress -- https://github.com/murzilius/jsudoku +refs/heads/*:refs/remotes/main/* # timeout=10
+ > git rev-parse refs/remotes/main/main^{commit} # timeout=10
+Checking out Revision 487fbbe75a54408d3eb4766221b739f763e1205a (refs/remotes/main/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 487fbbe75a54408d3eb4766221b739f763e1205a # timeout=10
+Commit message: "Add_test"
+ > git rev-list --no-walk 487fbbe75a54408d3eb4766221b739f763e1205a # timeout=10
+[Checks API] No suitable checks publisher found.
+[Jsudoku] $ mvn package
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building jsudoku 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[8mha:////4N4cxx/tRsSGZ0lXAaLP83Q9dxB/hcv+I4/oO4VB4WxuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ jsudoku ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/Jsudoku/src/main/resources
+[INFO] 
+[8mha:////4N4cxx/tRsSGZ0lXAaLP83Q9dxB/hcv+I4/oO4VB4WxuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ jsudoku ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 9 source files to /var/lib/jenkins/workspace/Jsudoku/target/classes
+[INFO] /var/lib/jenkins/workspace/Jsudoku/src/main/java/murzilius/oyg/sudoku/MainForm.java: /var/lib/jenkins/workspace/Jsudoku/src/main/java/murzilius/oyg/sudoku/MainForm.java uses or overrides a deprecated API.
+[INFO] /var/lib/jenkins/workspace/Jsudoku/src/main/java/murzilius/oyg/sudoku/MainForm.java: Recompile with -Xlint:deprecation for details.
+[INFO] /var/lib/jenkins/workspace/Jsudoku/src/main/java/murzilius/org/netbeans/lib/awtextra/AbsoluteLayout.java: Some input files use unchecked or unsafe operations.
+[INFO] /var/lib/jenkins/workspace/Jsudoku/src/main/java/murzilius/org/netbeans/lib/awtextra/AbsoluteLayout.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[8mha:////4N4cxx/tRsSGZ0lXAaLP83Q9dxB/hcv+I4/oO4VB4WxuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ jsudoku ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/Jsudoku/src/test/resources
+[INFO] 
+[8mha:////4N4cxx/tRsSGZ0lXAaLP83Q9dxB/hcv+I4/oO4VB4WxuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ jsudoku ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /var/lib/jenkins/workspace/Jsudoku/target/test-classes
+[INFO] 
+[8mha:////4N4cxx/tRsSGZ0lXAaLP83Q9dxB/hcv+I4/oO4VB4WxuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ jsudoku ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running murzilius.AppTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.04 s - in murzilius.AppTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[8mha:////4N4cxx/tRsSGZ0lXAaLP83Q9dxB/hcv+I4/oO4VB4WxuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-jar-plugin:3.0.2:jar (default-jar) @ jsudoku ---
+[INFO] Building jar: /var/lib/jenkins/workspace/Jsudoku/target/Jsudoku.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 6.177 s
+[INFO] Finished at: 2020-10-13T22:54:25+03:00
+[INFO] Final Memory: 17M/140M
+[INFO] ------------------------------------------------------------------------
+[Jsudoku] $ /bin/sh -xe /tmp/jenkins5561772341231846152.sh
+[Checks API] No suitable checks publisher found.
+Finished: SUCCESS
