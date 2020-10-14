@@ -8,20 +8,20 @@ Make some changes in vagrant file:
 `config.vm.network public_network` - to provide bridge network to VM  
 `vb.memory = "2048"` - more RAM is always better than less :)  
 Make some provision and startup configuration  
-`config.vm.provision "shell", inline: <<-SHELL  
-     sudo timedatectl set-timezone Europe/Minsk  
-     	 apt-get update  
-	 apt-get upgrade  
-	 apt-get install -y ansible  
-	 SHELL`  
+`config.vm.provision "shell", inline: <<-SHELL`  
+`sudo timedatectl set-timezone Europe/Minsk`  
+`apt-get update`  
+`apt-get upgrade`  
+`apt-get install -y ansible`  
+`SHELL`  
 Start VM - `vagrant up`  
-Debian virtual machine assign IP 10.6.5.109  
-### 1a   
+Debian virtual machine assigning IP 10.6.5.109  
+#### 1a   
 Than I have to install ansible on notebook with `apt-get install ansible`  
-I add string `10.6.5.109 ansible_ssh_private_key_file=/home/murzilius/.ssh/private_key` to /etc/ansible/hosts  
+I add string `10.6.5.109 ansible_ssh_private_key_file=/home/murzilius/.ssh/private_key` to "/etc/ansible/hosts"  
 to have access to VM host by ansible  
 I add string `remote_user = vagrant` to "/etc/ansible/ansible.cfg" to make user "vagrant" default  
-After that I create ansible playbook test.yml that provide following:  
+After that I create ansible playbook "test.yml" that provide following:  
 * Install MC (becouse i realy like it)  
 * Install JAVA Runtime Environment  
 * Install JAVA Development Kit  
@@ -37,7 +37,7 @@ To continue task I use Jsudoku source code
 I have to create Git repository and init it on notebook using `git clone https://murzilius/jsudoku`  
 Than I create Maven Project using  
 `mvn archetype:generate -DgroupId=murzilius -DartifactId=jsudoku -DarchetypeArtifactId=maven-archetype-simple -DarchetypeVersion=1.4 -DinteractiveMode=false"`  
-I put source code into Maven project ~/jsudoku/src/main/java/murzilius/  
+I put source code into Maven project "~/jsudoku/src/main/java/murzilius/"  
 Update Git repository using  
 `git add -A`  
 `git commit -m Maven ready`  
@@ -61,6 +61,7 @@ Here is the main settings of the task:
 * Git Credentials – Git username\password  
 * Branches to build - \*/main  
 * Shedule task - H/15 19 * * 3 (it means that task will be execute every 15 min.
+* Maven target - package
 ### 6.Adding code test to build
 I decided to use PMD for code testing. I use Maven plugin `maven-pmd-plugin` for this prupose
 Let\'s pom.xml modify file to configure plugin  
