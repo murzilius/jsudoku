@@ -9,7 +9,7 @@ Make some changes in vagrant file:
 `vb.memory = "2048"` - more RAM is always better than less :)  
 Make some provision and startup configuration  
 `config.vm.provision "shell", inline: <<-SHELL`  
-`sudo timedatectl set-timezone Europe/Minsk`  
+`timedatectl set-timezone Europe/Minsk`  
 `apt-get update`  
 `apt-get upgrade`  
 `apt-get install -y ansible`  
