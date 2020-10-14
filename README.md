@@ -60,7 +60,7 @@ Here is the main settings of the task:
 * Repository URL - https://github.com/murzilius/jsudoku/  
 * Git Credentials – Git username\password  
 * Branches to build - \*/main  
-* Shedule task - H/15 19 * * 3 (it means that task will be execute every 15 min.
+* Shedule task - H/15 22 * * 3 (it means that task will be execute every 15 min.)
 * Maven target - package
 ### 6.Adding code test to build
 I decided to use PMD for code testing. I use Maven plugin `maven-pmd-plugin` for this prupose
