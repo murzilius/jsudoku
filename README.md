@@ -75,8 +75,9 @@ Let\'s pom.xml modify file to configure plugin
 `</rulesets>`  
 `</configuration>`  
 `</plugin>`  
-As a result code have pased test that defined in basic.xml file
-The task is over thanks for attention.
+As a result code have pased test that defined in basic.xml file.  
+
+It was interesting chalange. The task is over thanks for attention. 
 
 
 
